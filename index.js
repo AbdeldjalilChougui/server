@@ -18,7 +18,7 @@ if (!GEMINI_API_KEY) {
   throw new Error("GEMINI_API_KEY is not set in the .env file");
 }
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-pro" }); // Using the gemini-pro model
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
 app.post('/api/chat', async (req, res) => {
     const { history, message } = req.body;
